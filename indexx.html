@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> JOB BOARD WEBISTE 
+        </title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css"/>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <body>
+            <header>
+                <div class="logo">
+                  <img src="bb.png" alt="job website">
+                </div>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Internships </a></li>
+
+                        </ul>
+                        <button id="signupButton">Sign Up</button>
+                       </nav>
+                    
+                      </div>
+            </header>
+            <div id="signupForm" class="modal">
+              <div class="modal-content">
+                <span class="close" id="close">&times;</span>
+                <h2>Signup Form</h2>
+                <form id="form">
+                  <input type="text" placeholder="Username" required>
+                  <input type="email" placeholder="Email" required>
+                  <input type="password" placeholder="Password" required>
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+        
+            <main>
+                <section class="post-a-job" id="job-post">
+                    <h2>Post a Job</h2>
+                    <form id="job-post-form">
+                      <label for="title">Job Title:</label>
+                      <input type="text" id="title" name="title" required>
+                      <label for="company">Company Name:</label>
+                      <input type="text" id="company" name="company" required>
+                      <label for="location">Location:</label>
+                      <input type="text" id="location" name="location" required>
+                      <label for="description">Job Description:</label>
+                      <textarea id="description" name="description" rows="10" required></textarea>
+                      <button type="submit">Post Job</button>
+                    </form>
+                  </section>
+                <section class="job-search">
+                  <h2>Job Search</h2>
+                  <input type="text" id="search-bar" placeholder="Search Jobs">
+                  <button onclick="searchJobs()">Search</button>
+                  <ul id="job-list">
+                    </ul>
+                </section>
+            
+                <section class="latest-jobs" id="job-post">
+                  <h2>Latest Jobs</h2>
+                  <ul>
+                    <li class="job-item">
+                      <h3>Software Developer</h3>
+                      <p>Company Name - islamabad</p>
+                      <button onclick="openApplyForm(this)">Apply Now</button>
+                      <div class="apply-form" hidden> <h3>Apply for Software Developer</h3>
+                        <form id="apply-form">
+                          <label for="name">Your Name:</label>
+                          <input type="text" id="name" name="name" required>
+                          <label for="email">Email Address:</label>
+                          <input type="email" id="email" name="email" required>
+                          <label for="resume">Upload Resume:</label>
+                          <input type="file" id="resume" name="resume">
+                          <button type="submit">Submit Application</button>
+                        </form>
+                      </div>
+                    </li>
+                    <li class="job-item">
+                        <h3>Graphic designer</h3>
+                        <p>Company Name - lahore</p>
+                        <button onclick="openApplyForm(this)">Apply Now</button>
+          <div class="apply-form" hidden> <h3>Apply for Graphic Designer</h3>
+            <form id="apply-form">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="resume">Upload Resume:</label>
+              <input type="file" id="resume" name="resume">
+              <button type="submit">Submit Application</button>
+            </form>
+          </div>
+                      </li>
+                      <li class="job-item">
+                        <h3>Web development</h3>
+                        <p>Company Name - karachi</p>
+                        <button onclick="openApplyForm(this)">Apply Now</button>
+          <div class="apply-form" hidden> <h3>Apply for web development</h3>
+            <form id="apply-form">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="resume">Upload Resume:</label>
+              <input type="file" id="resume" name="resume">
+              <button type="submit">Submit Application</button>
+            </form>
+          </div>
+                      </li>
+                      <li class="job-item">
+                        <h3>Business Analyst</h3>
+                        <p>Company Name - islamabad</p>
+                        <button onclick="openApplyForm(this)">Apply Now</button>
+          <div class="apply-form" hidden> <h3>Apply for Business analyst</h3>
+            <form id="apply-form">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="resume">Upload Resume:</label>
+              <input type="file" id="resume" name="resume">
+              <button type="submit">Submit Application</button>
+            </form>
+          </div>
+                      </li>
+                      <li class="job-item">
+                        <h3>Data entry specialist </h3>
+                        <p>Company Name - Multan</p>
+                        <button onclick="openApplyForm(this)">Apply Now</button>
+                        <div class="apply-form" hidden> <h3>Apply data entry specialist</h3>
+                          <form id="apply-form">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="resume">Upload Resume:</label>
+                            <input type="file" id="resume" name="resume">
+                            <button type="submit">Submit Application</button>
+                          </form>
+                        </div>
+                      </li>
+                      <li class="job-item">
+                        <h3>Wordpress developer</h3>
+                        <p>Company Name - Sindh</p>
+                        <button onclick="openApplyForm(this)">Apply Now</button>
+          <div class="apply-form" hidden> <h3>Apply for Wordpress Developer</h3>
+            <form id="apply-form">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="resume">Upload Resume:</label>
+              <input type="file" id="resume" name="resume">
+              <button type="submit">Submit Application</button>
+            </form>
+          </div>
+                      </li>
+                      <li class="job-item">
+                        <h3>AI specialist</h3>
+                        <p>Company Name - islamabad</p>
+                        <button onclick="openApplyForm(this)">Apply Now</button>
+          <div class="apply-form" hidden> <h3>Apply for AI specialist</h3>
+            <form id="apply-form">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="resume">Upload Resume:</label>
+              <input type="file" id="resume" name="resume">
+              <button type="submit">Submit Application</button>
+            </form>
+          </div>
+                      </li>
+                    </ul>
+                </section>
+                
+              </main>
+            
+             
+              <footer>
+         
+                <ul class="footer-icons">
+                  <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                  <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                  <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                  <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+              </ul>
+              <ul class="footer-menu">
+                        
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Internships</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Jobs </a></li>
+                
+            </ul>
+            <ul class="copy">
+        
+                <p>&copyright 2024</p>
+              </ul>
+              </footer>
+              <script src="secondscript.js"></script>
+            </body>
+              </html>
+          
+
+     
